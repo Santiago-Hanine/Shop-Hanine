@@ -56,8 +56,6 @@ function agregarCarrito(id) {
 
 
 
-
-
     actualizarCarrito()
 }
 
@@ -93,7 +91,7 @@ const actualizarCarrito = () => {
     carrito.forEach((prod) => {
         
         let carritoHTML = document.getElementById("carritoHTML")
-        carritoHTML.className = `productoEnCarrito`
+        carritoHTML.className = ``
         carritoHTML.innerHTML += `<div class="productoEnCarrito ">
         <p>${prod.nombre}</p>
         <p>Precio: ${prod.precio}
@@ -178,3 +176,4 @@ function reiniciarContador() {
     myTimeout = setTimeout(mostrarMensaje, 15000);
 }
 document.addEventListener("mousemove", reiniciarContador)
+
